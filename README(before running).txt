@@ -1,0 +1,147 @@
+Created by:-
+Tejas Trivedi
+Student of Skolar
+
+THIS IS A BASIC LOGIN WEBSITE
+How to run:-
+0.Create a "Major Project" folder
+1. Put "Authentication.js" in a folder named "API"
+2. Put "User.js" in a folder named "Modals"
+3. install the dependencies using command npm i
+4.Create a folder "staticFiles" and make the following structure
+
+*                   staticFiles                         * 
+                    /        \        \         \
+                images      app.js   index.html styles.css
+                  ||           (create an .html extention and paste the commented code)       
+        *paste all the photos
+5."connextion.js,index.js,package.json" should be in root folder that is "Major Project" 
+
+6. To run the login/signup page:-
+*Use in terminal 
+
+`nodemon index.js`
+
+OR
+
+*
+`node index.js`
+
+
+Code for index.html(copy from below)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Login & Registration form</title>
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <span class="menu-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="images/logo.jpg" alt="logo">
+                <h2>Registration</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+
+            </ul>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+
+    <!-- Popup form -->
+    <div class="burl-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please login in using your personal information to register yourself!</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="/" method="get" >
+                    <div class="input-field">
+                        <input type="text"  class="loginEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="loginPass" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                    <button type="submit" class="LOG">Log In</button>
+                </form>
+                <div class="botom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become part of our community,please sign up using your personal details </p>
+            </div>
+            <div class="form-content">
+                <h2>Signup</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" class="signEmail" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password"  class="signPass" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" class="policy">
+                        <label>
+                            I agree the
+                            <a href="#">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" id="dbsignup" class="SIGNUP">Sign Up</button>
+                </form>
+                <div class="botom-link">
+                    Already have an account?
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div class="box">
+            <h1>Welcome to a simple Login page.</h1>
+            <br>
+            <p class="interior">This is a simple a login page created by Tejas Trivedi using :- </p>
+            <ul class="interior">
+                <li>HTML</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>Nodejs</li>
+                <li>Expressjs</li>
+                <li>MongoDb</li>
+            </ul>
+            <span>Click on "Login" to login or to register yourself.</span>
+        </div>
+
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+<script src="./app.js"></script>
+
+</html>
